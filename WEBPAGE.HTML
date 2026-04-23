@@ -535,9 +535,7 @@
           </div>
         </div>
         <div class="hero-avatar">
-          <!-- Replace src with your photo URL -->
-          <!-- <img src="photo.jpg" alt="John Doe" /> -->
-          JD
+          <img src="1762905980227.png" alt="Diego Chamorro">
         </div>
       </div>
     </div>
@@ -731,37 +729,37 @@ I am actively involved in volunteering, where I have contributed to organizing r
             </div>
             <div class="contact-item">
               <div class="contact-icon">💼</div>
-              <span>linkedin.com/in/johndoe</span>
+              <a href="https://www.linkedin.com/in/diego-chamorro-segura-24a728395" target="_blank">LinkedIn</a>
             </div>
             <div class="contact-item">
               <div class="contact-icon">🐙</div>
-              <span>github.com/johndoe</span>
+              <a href="https://github.com/DiegoChamorroSegura29" target="_blank">GitHub</a>
             </div>
           </div>
         </div>
 
-        <form onsubmit="handleSubmit(event)">
+        <form action="https://formspree.io/f/mykllgja" method="POST">
           <div class="form-row">
             <div class="form-group">
               <label for="fname">First Name</label>
-              <input type="text" id="fname" placeholder="Jane" />
+              <input type="text" id="fname" name="fname" placeholder="Jane" />
             </div>
             <div class="form-group">
               <label for="lname">Last Name</label>
-              <input type="text" id="lname" placeholder="Smith" />
+              <input type="text" id="lname" name="lname" placeholder="Smith" />
             </div>
           </div>
           <div class="form-group">
             <label for="email">Email Address</label>
-            <input type="email" id="email" placeholder="@company.com" />
+            <input type="email" id="email" name="email" placeholder="@company.com" />
           </div>
           <div class="form-group">
             <label for="subject">Subject</label>
-            <input type="text" id="subject" placeholder="Project inquiry, job opportunity…" />
+            <input type="text" id="subject" name="subject" placeholder="Project inquiry, job opportunity…" />
           </div>
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" rows="5" placeholder="Tell me about your project or opportunity…"></textarea>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or opportunity…"></textarea>
           </div>
           <button type="submit" class="form-submit">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
@@ -784,20 +782,6 @@ I am actively involved in volunteering, where I have contributed to organizing r
   </footer>
 
   <script>
-    function handleSubmit(e) {
-      e.preventDefault();
-      const btn = e.target.querySelector('.form-submit');
-      btn.textContent = '✓ Message sent!';
-      btn.style.background = '#16a34a';
-      btn.disabled = true;
-      setTimeout(() => {
-        btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Send Message';
-        btn.style.background = '';
-        btn.disabled = false;
-        e.target.reset();
-      }, 3000);
-    }
-
     // Animate skill bars on scroll
     const bars = document.querySelectorAll('.skill-bar-fill');
     const widths = Array.from(bars).map(b => b.style.width);
